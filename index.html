@@ -1,76 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sssh-chat – Privacy Policy</title>
+    <title>Privacy Policy - sssh-chat</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-            color: #222;
-            line-height: 1.7;
+        :root {
+            --primary-color: #2563eb;
+            --text-main: #374151;
+            --text-dark: #111827;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
         }
-        h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
-        h2 { font-size: 1.2rem; margin-top: 2rem; color: #111; }
-        p, li { color: #444; }
-        ul { padding-left: 1.5rem; }
-        a { color: #0066cc; }
-        .updated { color: #888; font-size: 0.9rem; margin-bottom: 2rem; }
-        hr { border: none; border-top: 1px solid #eee; margin: 2rem 0; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        h1 {
+            color: var(--text-dark);
+            font-size: 2.25rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .last-updated {
+            display: block;
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1rem;
+        }
+        h3 {
+            color: var(--text-dark);
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        p, li {
+            margin-bottom: 1rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        strong {
+            color: var(--text-dark);
+        }
+        .footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.875rem;
+            text-align: center;
+            color: #6b7280;
+        }
+        @media (max-width: 640px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Privacy Policy di sssh-chat</h1>
+        <span class="last-updated">Ultimo aggiornamento: 3 Maggio 2026</span>
 
-<h1>Privacy Policy</h1>
-<p class="updated">Last updated: April 2026</p>
+        <p>La tua privacy è al centro di sssh-chat. Questa Privacy Policy spiega come gestiamo le tue informazioni e, soprattutto, cosa non possiamo vedere.</p>
 
-<p>sssh-chat is a privacy-focused end-to-end encrypted messaging application. This policy explains what data we collect, how we use it, and your rights regarding your personal information.</p>
+        <h2>1. La nostra Filosofia: Privacy by Design</h2>
+        <p>sssh-chat è progettata per essere un sistema a "conoscenza zero" per quanto riguarda i contenuti delle conversazioni. Utilizziamo il Protocollo Signal per garantire la crittografia end-to-end (E2EE). Ciò significa che i messaggi vengono cifrati sul tuo dispositivo e decifrati solo sul dispositivo del destinatario. <strong>Il server di sssh-chat non possiede le chiavi per decifrare i tuoi messaggi e non può leggerne il contenuto.</strong></p>
 
-<h2>1. Data We Collect</h2>
-<ul>
-    <li><strong>Account information:</strong> username and hashed password (we never store your password in plain text).</li>
-    <li><strong>Cryptographic keys:</strong> public keys used for the Signal Protocol end-to-end encryption. Your private keys never leave your device.</li>
-    <li><strong>Messages:</strong> messages are stored on our servers only to enable delivery. They are end-to-end encrypted and unreadable to us. Ephemeral messages are automatically deleted from our servers within approximately 30 days.</li>
-    <li><strong>Media files:</strong> images and files you send are stored encrypted on Cloudflare R2 object storage.</li>
-    <li><strong>Device token:</strong> a Firebase Cloud Messaging (FCM) token used to deliver silent push notifications. No message content is ever sent through FCM.</li>
-</ul>
+        <h2>2. Informazioni che raccogliamo</h2>
+        <h3>2.1 Informazioni fornite dall'utente</h3>
+        <ul>
+            <li><strong>Account:</strong> Per creare un account, richiediamo un nome utente e una password.</li>
+            <li><strong>Profilo:</strong> Puoi scegliere di caricare un avatar.</li>
+            <li><strong>Chiavi Crittografiche:</strong> Carichiamo le tue chiavi di identità, pre-chiavi firmate e pre-chiavi one-time necessarie per stabilire connessioni sicure con altri utenti.</li>
+        </ul>
 
-<h2>2. How We Use Your Data</h2>
-<p>All data collected is used exclusively to provide the messaging service. We do not use your data for advertising, profiling, or any purpose beyond operating the application.</p>
+        <h3>2.2 Informazioni raccolte automaticamente</h3>
+        <ul>
+            <li><strong>Token dei Dispositivi:</strong> Raccogliamo il token di notifica del tuo dispositivo (FCM - Firebase Cloud Messaging) per inviarti notifiche push quando ricevi un messaggio.</li>
+            <li><strong>Stato di Presenza:</strong> Registriamo l'ultimo accesso e se sei online per informare i tuoi contatti.</li>
+        </ul>
 
-<h2>3. Third-Party Services</h2>
-<ul>
-    <li><strong>Cloudflare R2:</strong> used for encrypted media storage.</li>
-    <li><strong>Firebase Cloud Messaging (FCM):</strong> used to deliver push notification signals. No message content is transmitted through this service.</li>
-</ul>
+        <h2>3. Come utilizziamo i tuoi dati</h2>
+        <p>I dati raccolti sono utilizzati esclusivamente per:</p>
+        <ul>
+            <li>Gestire l'autenticazione e l'accesso al tuo account.</li>
+            <li>Facilitare lo scambio di chiavi crittografiche tra utenti.</li>
+            <li>Instradare i messaggi cifrati verso i destinatari.</li>
+            <li>Inviare notifiche di nuova messaggistica.</li>
+            <li>Fornire l'anteprima dei link (tramite un proxy server che nasconde il tuo indirizzo IP).</li>
+        </ul>
 
-<h2>4. Data Retention</h2>
-<ul>
-    <li>Ephemeral messages are automatically deleted from our servers within approximately 30 days.</li>
-    <li>Account data is retained until you request deletion.</li>
-    <li>Media files are retained until the associated message is deleted or you request account deletion.</li>
-</ul>
+        <h2>4. Archiviazione e Sicurezza</h2>
+        <ul>
+            <li><strong>Messaggi:</strong> I messaggi cifrati vengono conservati temporaneamente sul server finché non vengono consegnati o finché non scadono (nel caso di messaggi efimeri).</li>
+            <li><strong>Media:</strong> I file (immagini, documenti) sono cifrati sul tuo dispositivo prima dell'invio e archiviati su server remoti (Cloudflare R2). Il server gestisce solo le chiavi di cifratura dei file (DEK), che sono a loro volta protette da una Master Key.</li>
+            <li><strong>Database:</strong> Utilizziamo database sicuri con accesso ristretto.</li>
+        </ul>
 
-<h2>5. Your Rights</h2>
-<p>You have the right to request deletion of your account and all associated data at any time. To do so, contact us at the email address below. We will process your request within 30 days.</p>
+        <h2>5. Condivisione dei dati</h2>
+        <p>Non vendiamo, non noleggiamo e non scambiamo i tuoi dati personali con terze parti. Utilizziamo servizi infrastrutturali (come Cloudflare e Firebase) che agiscono come responsabili del trattamento e sono vincolati a rigorosi standard di sicurezza.</p>
 
-<h2>6. Security</h2>
-<p>All messages are end-to-end encrypted using the Signal Protocol. This means only you and your intended recipients can read your messages. We have no technical ability to access message content.</p>
+        <h2>6. I tuoi diritti (GDPR e Codice Privacy)</h2>
+        <p>In conformità al Regolamento UE 2016/679 (GDPR) e al Codice in materia di protezione dei dati personali (D.Lgs. 196/2003, come novellato dal D.Lgs. 101/2018), hai il diritto di:</p>
+        <ul>
+            <li><strong>Accesso:</strong> Sapere se i tuoi dati sono trattati e ottenerne copia.</li>
+            <li><strong>Rettifica:</strong> Chiedere la correzione di dati inesatti.</li>
+            <li><strong>Cancellazione (Diritto all'oblio):</strong> Richiedere la rimozione definitiva dei tuoi dati.</li>
+            <li><strong>Limitazione e Opposizione:</strong> Opporsi al trattamento dei dati per finalità specifiche.</li>
+            <li><strong>Portabilità:</strong> Ricevere i tuoi dati in un formato strutturato e leggibile.</li>
+            <li><strong>Reclamo:</strong> Proporre reclamo all'Autorità Garante per la Protezione dei Dati Personali (Garante Privacy).</li>
+        </ul>
 
-<h2>7. Children's Privacy</h2>
-<p>sssh-chat is not directed at children under the age of 13. We do not knowingly collect personal information from children.</p>
+        <h2>7. Titolare del Trattamento</h2>
+        <p>Il Titolare del Trattamento è il team di sviluppo di sssh-chat. Per l'esercizio dei diritti sopra elencati, puoi contattare il Titolare tramite i canali di supporto ufficiali.</p>
 
-<h2>8. Changes to This Policy</h2>
-<p>We may update this policy from time to time. We will notify users of significant changes through the application. Continued use of the service after changes constitutes acceptance of the updated policy.</p>
+        <h2>8. Modifiche alla Privacy Policy</h2>
+        <p>Potremmo aggiornare questa policy periodicamente. Ti avviseremo di eventuali modifiche significative tramite l'app.</p>
 
-<h2>9. Contact</h2>
-<p>For any privacy-related requests or questions, please contact us at: <a href="mailto:camel.laight@gmail.com">camel.laight@gmail.com</a></p>
+        <p><strong>Contatti:</strong> Per qualsiasi domanda sulla privacy, puoi contattare il team di sviluppo tramite i canali ufficiali del progetto.</p>
 
-<hr>
-<p style="font-size:0.85rem; color:#999;">sssh-chat — All rights reserved.</p>
-
+        <div class="footer">
+            &copy; 2026 sssh-chat. Tutti i diritti riservati.
+        </div>
+    </div>
 </body>
 </html>
